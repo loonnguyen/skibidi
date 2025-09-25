@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+     <meta charset="UTF-8">
+     <title>Detail Room</title>
+     <style> 
+        body {
+            font-family: Arial,  sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;           
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align:   center;
+        }
+
+        
+
+        .booking-form {
+          background-image: url('img/r1.jpg');
+            background-color: white;
+            padding: 30px;
+            margin: 20px auto;
+            width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .booking-form h2 {
+            margin-bottom: 20px;
+            color: #333
+        }
+
+        .booking-form form{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .booking-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .booking-form input, 
+        .booking-form select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .booking-form button {
+            grid-column: span 2;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .booking-form button:hover {
+            background-color: #2980b9;
+        }
+
+        .room-section {
+            padding: 40px;
+            background-color: #f9f9f9;
+            text-align: center;     
+        }
+
+        .room-section h2 {
+            margin-bottom: 30px;
+        }
+
+        .room-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+         .room-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 300px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .room-card img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .room-card h3 {
+      margin: 10px 0;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #e67e22;
+    }
+
+    .features {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .description {
+      font-size: 13px;
+      color: #777;
+      margin: 10px 0;
+    }
+     .buttons .btn {
+      display: inline-block;
+      margin: 5px;
+      padding: 8px 12px;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .buttons .btn:hover {
+      background-color: #2980b9;
+    }
+
+    .form-button {
+  grid-column: 1 / -1; 
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.form-button button {
+  padding: 10px 30px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button button:hover {
+  background-color: #2980b9;
+}
+
+     </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Welcome to 7104's Hotel</h1>
+    <p>Book your perfect room</p>
+  </header>
+
+  <section class="booking-form">
+    <h2>Book Your Room</h2>
+    <form>
+      <label for="checkin">Check In:</label>
+      <input type="date" id="checkin" name="checkin" required>
+
+      <label for="checkout">Check Out:</label>
+      <input type="date" id="checkout" name="checkout" required>
+
+      <label for="adult">Adult:</label>
+      <select id="adult" name="adult">
+        <option value="1">1 Adult</option>
+        <option value="2">2 Adults</option>
+        <option value="3">3 Adults</option>
+        <option value="4">4 Adults</option>
+      </select>
+
+      <label for="child">Child:</label>
+      <select id="child" name="child">
+        <option value="0">0 Child</option>
+        <option value="1">1 Child</option>
+        <option value="2">2 Children</option>
+        <option value="3">3 Children</option>
+      </select>
+
+      <form>
+
+  <div class="form-button">
+    <button type="submit">BOOK</button>
+  </div>
+</form>
+
+
+    </form>
+  </section>
+
+  <section class="room-section">
+    <h2>Explore Our Rooms</h2>
+    <div class="room-grid">
+      <div class="room-card">
+        <img src="img/r1.jpg" alt="Normal Room">
+        <h3>Normal Room</h3>
+        <p class="price">$100/Night</p>
+        <p class="features">3 Bed • 2 Bath • Wifi</p>
+        <p class="description">Normal room for a family</p>
+        <div class="buttons">
+          <a href="#" class="btn">VIEW DETAIL</a>
+          <a href="#" class="btn">BOOK NOW</a>
+        </div>
+      </div>
+
+       <div class="room-card">
+        <img src="img/r3.jpg" alt="Expensive Room">
+        <h3>Expensive Room</h3>
+        <p class="price">$200/Night</p>
+        <p class="features">3 Bed • 2 Bath • Wifi</p>
+        <p class="description">Expensive room for a family</p>
+        <div class="buttons">
+          <a href="#" class="btn">VIEW DETAIL</a>
+          <a href="#" class="btn">BOOK NOW</a>
+        </div>
+      </div>
+
+       <div class="room-card">
+        <img src="img/r2.jpg" alt="Luxury Room">
+        <h3>Luxury Room</h3>
+        <p class="price">$300/Night</p>
+        <p class="features">3 Bed • 2 Bath • Wifi</p>
+        <p class="description">Luxury room for a family</p>
+        <div class="buttons">
+          <a href="#" class="btn">VIEW DETAIL</a>
+          <a href="#" class="btn">BOOK NOW</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
